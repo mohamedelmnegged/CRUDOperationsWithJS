@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManagementSystem</title>
+    <link rel="stylesheet" href="ManagementSystem.css"/>
+</head>
+<body>
+    
+    <div class="crud">
+        <div class="head">
+            <h2> crud operations</h2>
+            <p> Managment System Crud operations </p>
+        </div>
+        <div class="input">
+            <input placeholder="title" type="text" id="title">
+            <div class="totalPrice">
+                <input onkeyup="getTotal()" placeholder="price"  type="number" id="price">
+                <input onkeyup="getTotal()" placeholder="taxs" type="number" id="taxs">
+                <input onkeyup="getTotal()" placeholder="ads" type="number" id="ads">
+                <input onkeyup="getTotal()" placeholder="discount" type="number" id="discount">
+                <smal id="total"></smal>
+            </div>
+            <input placeholder="Count" type="number" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="create">create</button> 
+            <span class="error" id="error"> Please Enter valid data </span> 
+        </div>
+
+        <div class="output">
+            <div class="searchBlock">
+                <input placeholder="Search" type="text" id="search">
+                <div class="btnSearch">
+                    <button id="SearchByTitle" onclick="fillterByTitle()">Search By Title</button>
+                    <button id="SearchByCategory" onclick="fillterByCategory()">Search By Category</button>    
+                </div>
+            </div>
+            <button id="deleteAll" onclick="deleteAll()" > delete All </button>
+            <table> 
+                <thead> 
+                    <tr>
+                        <td> id </td>
+                        <td> title </td>
+                        <td> price </td>
+                        <td> taxs </td>
+                        <td> ads </td>
+                        <td> discount </td>
+                        <td> total </td>
+                        <td> category </td>
+                        <td> update </td>
+                        <td> delete </td>
+                    </tr>
+                </thead>
+                <tbody id="tbody"> 
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="ManagementSystem.js">
+    </script>
+</body>
+</html>
